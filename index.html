@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adwitiya Kalash Collection – AK Collection</title>
+<meta name="description" content="Adwitiya Kalash Collection – Premium ethnic & western wear for women, men, and children. Handcrafted with love, made to be worn for life.">
+<meta name="keywords" content="ethnic wear, traditional clothing, women fashion, kurta, saree, AK Collection, Adwitiya Kalash">
+<meta property="og:title" content="Adwitiya Kalash Collection">
+<meta property="og:description" content="Premium ethnic & western wear. Handcrafted with love.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1208;
+    --cream: #faf6f0;
+    --parchment: #f2ece2;
+    --gold: #b8832a;
+    --gold-light: #e8c97a;
+    --gold-pale: #f7eed8;
+    --rust: #8b3a2a;
+    --rust-light: #c06040;
+    --sage: #5c6b52;
+    --mist: #9e9890;
+    --hairline: #e0d8cc;
+    --hairline-soft: #ede7dd;
+    --white: #ffffff;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --radius-sm: 4px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-pill: 9999px;
+    --section: 96px;
+    --gutter: 64px;
+    --max: 1280px;
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { cursor: pointer; border: none; background: none; font: inherit; }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* ── NAV ── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250, 246, 240, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--hairline);
+    transition: var(--transition);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+  }
+  .nav-logo {
+    display: flex; flex-direction: column; line-height: 1;
+  }
+  .nav-logo-name {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 600; letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .nav-logo-tag {
+    font-size: 9px; font-weight: 500; letter-spacing: 0.18em;
+    color: var(--gold); text-transform: uppercase; margin-top: 2px;
+  }
+  .nav-links {
+    display: flex; align-items: center; gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--mist);
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+    height: 1px; background: var(--gold); transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    background: var(--ink); color: var(--cream) !important;
+    padding: 10px 22px; border-radius: var(--radius-pill);
+    font-size: 13px !important; font-weight: 500 !important;
+    letter-spacing: 0.05em; transition: background var(--transition);
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--ink) !important; }
+  .nav-cta::after { display: none !important; }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    padding: 8px; cursor: pointer;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 1.5px; background: var(--ink);
+    transition: var(--transition);
+  }
+
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 99;
+    background: var(--cream); padding-top: 80px;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 40px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: var(--font-display); font-size: 32px; font-weight: 500;
+    color: var(--ink); letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* ── PAGE SECTIONS ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh; display: flex; align-items: flex-end;
+    position: relative; overflow: hidden;
+    background: var(--ink);
+    padding-bottom: 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 70% 40%, rgba(184,131,42,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 20% 60%, rgba(139,58,42,0.22) 0%, transparent 60%),
+      linear-gradient(160deg, #1a1208 0%, #2d1f0e 40%, #1a1208 100%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: repeating-linear-gradient(
+      0deg, transparent, transparent 39px, rgba(255,255,255,0.5) 39px, rgba(255,255,255,0.5) 40px
+    ), repeating-linear-gradient(
+      90deg, transparent, transparent 39px, rgba(255,255,255,0.5) 39px, rgba(255,255,255,0.5) 40px
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+    width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 300; line-height: 0.92; letter-spacing: -0.01em;
+    color: var(--cream); margin-bottom: 32px;
+    max-width: 780px;
+  }
+  .hero-title em {
+    font-style: italic; color: var(--gold-light);
+    display: block;
+  }
+  .hero-sub {
+    font-size: 15px; font-weight: 300; color: rgba(250,246,240,0.6);
+    max-width: 400px; line-height: 1.7; margin-bottom: 48px;
+  }
+  .hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold); color: var(--ink);
+    padding: 16px 36px; border-radius: var(--radius-pill);
+    font-size: 14px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; transition: var(--transition);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(250,246,240,0.3); color: var(--cream);
+    padding: 16px 36px; border-radius: var(--radius-pill);
+    font-size: 14px; font-weight: 500; letter-spacing: 0.05em;
+    text-transform: uppercase; transition: var(--transition);
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-scroll {
+    position: absolute; bottom: 32px; right: var(--gutter);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(250,246,240,0.4); font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; writing-mode: vertical-rl;
+  }
+  .hero-scroll::after {
+    content: ''; display: block; width: 1px; height: 48px;
+    background: linear-gradient(to bottom, rgba(250,246,240,0.4), transparent);
+  }
+  .hero-stats {
+    position: absolute; top: 50%; right: var(--gutter);
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 32px;
+  }
+  .hero-stat { text-align: right; }
+  .hero-stat-num {
+    font-family: var(--font-display); font-size: 36px; font-weight: 300;
+    color: var(--gold-light); line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(250,246,240,0.4); margin-top: 4px;
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-strip {
+    background: var(--gold); overflow: hidden;
+    padding: 14px 0; border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .marquee-track {
+    display: flex; gap: 0; white-space: nowrap;
+    animation: marquee 24s linear infinite;
+  }
+  .marquee-item {
+    display: inline-flex; align-items: center; gap: 24px;
+    padding-right: 48px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink);
+  }
+  .marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--rust); }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* ── SECTIONS ── */
+  .section { padding: var(--section) 0; }
+  .section-sm { padding: 64px 0; }
+
+  .section-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: ''; display: block; width: 28px; height: 1px; background: var(--gold);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400; line-height: 1.08; letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .section-title em { font-style: italic; color: var(--rust); }
+  .section-body {
+    font-size: 15px; color: var(--mist); line-height: 1.8;
+    max-width: 540px; margin-top: 16px;
+  }
+
+  /* ── CATEGORIES ── */
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-top: 48px;
+  }
+  .cat-card {
+    position: relative; aspect-ratio: 3/4; overflow: hidden;
+    border-radius: var(--radius-md); cursor: pointer;
+    transition: var(--transition);
+  }
+  .cat-card:hover { transform: translateY(-4px); }
+  .cat-card:hover .cat-img { transform: scale(1.05); }
+  .cat-img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .cat-bg {
+    width: 100%; height: 100%;
+    transition: transform 0.6s ease;
+  }
+  .cat-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(26,18,8,0.85) 0%, rgba(26,18,8,0.2) 50%, transparent 100%);
+  }
+  .cat-info {
+    position: absolute; bottom: 24px; left: 24px; right: 24px;
+  }
+  .cat-name {
+    font-family: var(--font-display); font-size: 22px; font-weight: 400;
+    color: var(--cream); line-height: 1.2;
+  }
+  .cat-count {
+    font-size: 11px; letter-spacing: 0.12em; color: var(--gold-light);
+    margin-top: 6px;
+  }
+  .cat-arrow {
+    position: absolute; top: 20px; right: 20px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cream); font-size: 14px;
+    opacity: 0; transform: translate(4px, -4px);
+    transition: var(--transition);
+  }
+  .cat-card:hover .cat-arrow { opacity: 1; transform: translate(0,0); }
+
+  /* Category SVG backgrounds */
+  .cat-women { background: linear-gradient(135deg, #8b3a2a 0%, #c06040 40%, #e8c97a 100%); }
+  .cat-men { background: linear-gradient(135deg, #2a3a5c 0%, #4a6080 40%, #8a9ab0 100%); }
+  .cat-kids { background: linear-gradient(135deg, #5c6b52 0%, #8a9a78 40%, #c8d8a8 100%); }
+  .cat-fusion { background: linear-gradient(135deg, #5c3a6b 0%, #8a6080 40%, #d8c0e0 100%); }
+
+  /* ── PRODUCT GRID ── */
+  .products-header {
+    display: flex; align-items: flex-end;
+    justify-content: space-between; margin-bottom: 40px;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .products-filters {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px;
+  }
+  .filter-chip {
+    padding: 8px 20px; border-radius: var(--radius-pill);
+    border: 1px solid var(--hairline); background: var(--white);
+    font-size: 12px; font-weight: 500; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--mist);
+    cursor: pointer; transition: var(--transition);
+  }
+  .filter-chip:hover, .filter-chip.active {
+    background: var(--ink); color: var(--cream); border-color: var(--ink);
+  }
+  .search-bar {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--white); border: 1px solid var(--hairline);
+    border-radius: var(--radius-pill); padding: 10px 20px;
+    max-width: 300px; width: 100%;
+  }
+  .search-bar svg { color: var(--mist); flex-shrink: 0; }
+  .search-bar input {
+    border: none; outline: none; background: transparent;
+    font: inherit; font-size: 13px; color: var(--ink);
+    width: 100%;
+  }
+  .search-bar input::placeholder { color: var(--mist); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .product-card {
+    background: var(--white); border-radius: var(--radius-md);
+    overflow: hidden; cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid var(--hairline-soft);
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(26,18,8,0.12); }
+  .product-img-wrap {
+    position: relative; aspect-ratio: 3/4; overflow: hidden;
+    background: var(--parchment);
+  }
+  .product-img {
+    width: 100%; height: 100%;
+    transition: transform 0.6s ease;
+  }
+  .product-card:hover .product-img { transform: scale(1.06); }
+  .product-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--rust); color: var(--white);
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 5px 12px; border-radius: var(--radius-pill);
+  }
+  .product-badge.new { background: var(--sage); }
+  .product-badge.sale { background: var(--rust); }
+  .product-wish {
+    position: absolute; top: 14px; right: 14px;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--white); border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; transition: var(--transition);
+    opacity: 0; transform: translateY(-4px);
+  }
+  .product-card:hover .product-wish { opacity: 1; transform: translateY(0); }
+  .product-info { padding: 18px 20px 22px; }
+  .product-cat {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .product-name {
+    font-family: var(--font-display); font-size: 18px; font-weight: 500;
+    color: var(--ink); line-height: 1.3; margin-bottom: 6px;
+  }
+  .product-desc {
+    font-size: 12px; color: var(--mist); line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .product-footer {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .product-price {
+    font-family: var(--font-display); font-size: 20px; font-weight: 500;
+    color: var(--ink);
+  }
+  .product-price .original {
+    font-size: 13px; color: var(--mist); text-decoration: line-through;
+    margin-right: 6px;
+  }
+  .product-price .sale { color: var(--rust); }
+  .product-enquire {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ink); color: var(--cream);
+    padding: 8px 16px; border-radius: var(--radius-pill);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: var(--transition);
+  }
+  .product-enquire:hover { background: var(--gold); color: var(--ink); }
+
+  /* ── STORY SECTION ── */
+  .story-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: center;
+  }
+  .story-images {
+    position: relative; height: 580px;
+  }
+  .story-img-main {
+    position: absolute; top: 0; left: 0; right: 80px; bottom: 80px;
+    border-radius: var(--radius-md); overflow: hidden;
+    background: linear-gradient(135deg, #8b3a2a, #c06040);
+  }
+  .story-img-accent {
+    position: absolute; bottom: 0; right: 0; width: 55%; height: 55%;
+    border-radius: var(--radius-md); overflow: hidden;
+    background: linear-gradient(135deg, #b8832a, #e8c97a);
+    border: 6px solid var(--cream);
+  }
+  .story-img-inner {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 80px; opacity: 0.2; color: var(--white);
+  }
+  .story-features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px;
+  }
+  .story-feat {
+    padding: 20px; background: var(--parchment); border-radius: var(--radius-sm);
+    border-left: 3px solid var(--gold);
+  }
+  .story-feat-title {
+    font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px;
+  }
+  .story-feat-body { font-size: 12px; color: var(--mist); line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background: var(--ink); padding: var(--section) 0; }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 48px;
+  }
+  .testi-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md); padding: 32px;
+  }
+  .testi-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 3px; }
+  .testi-text {
+    font-family: var(--font-display); font-size: 18px; font-weight: 300; font-style: italic;
+    color: rgba(250,246,240,0.85); line-height: 1.6; margin-bottom: 24px;
+  }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--gold); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--ink);
+  }
+  .testi-name { font-size: 13px; font-weight: 600; color: var(--cream); }
+  .testi-loc { font-size: 11px; color: rgba(250,246,240,0.4); }
+
+  .testimonials-section .section-title { color: var(--cream); }
+  .testimonials-section .section-label { color: var(--gold); }
+  .testimonials-section .section-label::before { background: var(--gold); }
+
+  /* ── PROCESS ── */
+  .process-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; margin-top: 56px;
+    position: relative;
+  }
+  .process-grid::before {
+    content: ''; position: absolute; top: 28px; left: 12.5%; right: 12.5%;
+    height: 1px; background: var(--hairline);
+  }
+  .process-step { padding: 0 16px; text-align: center; }
+  .process-num {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--parchment); border: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--gold);
+    position: relative; z-index: 1; background: var(--cream);
+  }
+  .process-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .process-body { font-size: 12px; color: var(--mist); line-height: 1.7; }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: start; margin-top: 48px;
+  }
+  .contact-info { padding-right: 24px; }
+  .contact-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 20px 0; border-bottom: 1px solid var(--hairline);
+  }
+  .contact-item:last-child { border-bottom: none; }
+  .contact-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--gold-pale); border: 1px solid var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0; color: var(--gold);
+  }
+  .contact-item-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); margin-bottom: 4px; }
+  .contact-item-val { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+  .contact-form-wrap {
+    background: var(--white); border-radius: var(--radius-md);
+    padding: 40px; border: 1px solid var(--hairline);
+  }
+  .form-title {
+    font-family: var(--font-display); font-size: 24px; font-weight: 500;
+    color: var(--ink); margin-bottom: 28px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 18px; }
+  .form-label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mist); margin-bottom: 8px; }
+  .form-input {
+    width: 100%; padding: 12px 16px;
+    border: 1px solid var(--hairline); border-radius: var(--radius-sm);
+    background: var(--cream); font: inherit; font-size: 14px; color: var(--ink);
+    transition: border-color 0.2s;
+  }
+  .form-input:focus { outline: none; border-color: var(--gold); background: var(--white); }
+  .form-input::placeholder { color: var(--mist); }
+  textarea.form-input { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%; padding: 16px; border-radius: var(--radius-pill);
+    background: var(--ink); color: var(--cream);
+    font: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; cursor: pointer; transition: var(--transition);
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--gold); color: var(--ink); }
+  .whatsapp-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 14px;
+    border-radius: var(--radius-pill); background: #25D366; color: var(--white);
+    font: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; cursor: pointer; transition: var(--transition);
+    margin-top: 12px; text-decoration: none;
+  }
+  .whatsapp-btn:hover { background: #1da851; transform: translateY(-2px); }
+
+  /* ── ABOUT ── */
+  .values-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;
+  }
+  .value-card {
+    padding: 32px; border: 1px solid var(--hairline);
+    border-radius: var(--radius-md); background: var(--white);
+    transition: var(--transition);
+  }
+  .value-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .value-icon { font-size: 28px; margin-bottom: 16px; }
+  .value-title { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+  .value-body { font-size: 13px; color: var(--mist); line-height: 1.8; }
+
+  .journey-timeline {
+    margin-top: 56px; position: relative; padding-left: 32px;
+  }
+  .journey-timeline::before {
+    content: ''; position: absolute; top: 8px; bottom: 8px; left: 7px;
+    width: 1px; background: var(--hairline);
+  }
+  .journey-item { margin-bottom: 40px; position: relative; }
+  .journey-dot {
+    position: absolute; left: -29px; top: 5px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--cream);
+  }
+  .journey-year { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .journey-title { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+  .journey-body { font-size: 13px; color: var(--mist); line-height: 1.7; }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--ink); padding: 64px 0 32px; }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px;
+    margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand-name {
+    font-family: var(--font-display); font-size: 22px; font-weight: 500; color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .footer-brand-tag { font-size: 10px; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-brand-body { font-size: 13px; color: rgba(250,246,240,0.5); line-height: 1.8; max-width: 280px; }
+  .footer-col-title { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 13px; color: rgba(250,246,240,0.5); transition: color 0.2s; cursor: pointer; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-social { display: flex; gap: 12px; margin-top: 20px; }
+  .social-btn {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(250,246,240,0.5); font-size: 14px; transition: var(--transition);
+    cursor: pointer;
+  }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 11px; color: rgba(250,246,240,0.3); }
+
+  /* ── PRODUCT DETAIL PAGE ── */
+  .pdp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; padding-top: 40px; }
+  .pdp-gallery { position: sticky; top: 100px; }
+  .pdp-main-img {
+    aspect-ratio: 3/4; border-radius: var(--radius-md); overflow: hidden;
+    margin-bottom: 12px; background: var(--parchment);
+  }
+  .pdp-thumbs { display: flex; gap: 10px; }
+  .pdp-thumb {
+    width: 72px; height: 88px; border-radius: var(--radius-sm);
+    overflow: hidden; cursor: pointer; border: 2px solid transparent;
+    transition: var(--transition); background: var(--parchment);
+  }
+  .pdp-thumb.active { border-color: var(--gold); }
+  .pdp-info-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .pdp-title { font-family: var(--font-display); font-size: 40px; font-weight: 400; line-height: 1.08; color: var(--ink); margin-bottom: 16px; }
+  .pdp-price { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--ink); margin-bottom: 28px; }
+  .pdp-desc { font-size: 14px; color: var(--mist); line-height: 1.9; margin-bottom: 32px; border-bottom: 1px solid var(--hairline); padding-bottom: 32px; }
+  .pdp-option-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); margin-bottom: 12px; }
+  .pdp-sizes { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+  .size-btn {
+    width: 44px; height: 44px; border-radius: var(--radius-sm);
+    border: 1px solid var(--hairline); background: var(--white);
+    font-size: 13px; font-weight: 500; color: var(--ink); cursor: pointer;
+    transition: var(--transition); display: flex; align-items: center; justify-content: center;
+  }
+  .size-btn:hover, .size-btn.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .pdp-colors { display: flex; gap: 10px; margin-bottom: 32px; }
+  .color-dot {
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+    border: 2px solid transparent; transition: var(--transition);
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.1);
+  }
+  .color-dot.active, .color-dot:hover { border-color: var(--gold); transform: scale(1.15); }
+  .pdp-actions { display: flex; flex-direction: column; gap: 12px; }
+  .pdp-btn-primary {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 16px; border-radius: var(--radius-pill); background: var(--ink); color: var(--cream);
+    font: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; transition: var(--transition);
+  }
+  .pdp-btn-primary:hover { background: var(--gold); color: var(--ink); }
+  .pdp-features { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--hairline); }
+  .pdp-feat-row { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--hairline-soft); }
+  .pdp-feat-row:last-child { border-bottom: none; }
+  .pdp-feat-icon { font-size: 16px; flex-shrink: 0; color: var(--gold); margin-top: 2px; }
+  .pdp-feat-text { font-size: 13px; color: var(--mist); line-height: 1.6; }
+  .pdp-feat-text strong { color: var(--ink); font-weight: 600; }
+
+  /* ── BACK BUTTON ── */
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--mist); margin-bottom: 32px; cursor: pointer; transition: color 0.2s;
+    padding-top: 24px;
+  }
+  .back-btn:hover { color: var(--gold); }
+
+  /* ── PRODUCTS PAGE ── */
+  .prods-page-hero {
+    background: var(--ink); padding: 80px 0 60px; margin-bottom: 0;
+  }
+  .prods-page-title {
+    font-family: var(--font-display); font-size: 56px; font-weight: 300; color: var(--cream);
+    line-height: 1; margin-bottom: 12px;
+  }
+  .prods-page-sub { font-size: 14px; color: rgba(250,246,240,0.5); }
+  .prods-page-body { padding: 48px 0 var(--section); }
+  .prods-toolbar {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px; margin-bottom: 32px;
+  }
+
+  /* ── ABOUT PAGE ── */
+  .about-hero {
+    background: linear-gradient(135deg, #1a1208 0%, #3a2010 50%, #1a1208 100%);
+    padding: 120px 0 80px;
+  }
+  .about-hero-title {
+    font-family: var(--font-display); font-size: clamp(48px,6vw,80px); font-weight: 300;
+    color: var(--cream); line-height: 0.95; max-width: 700px;
+  }
+  .about-hero-title em { color: var(--gold-light); font-style: italic; }
+
+  /* ── NOTIFICATION ── */
+  .notification {
+    position: fixed; bottom: 24px; right: 24px; z-index: 200;
+    background: var(--ink); color: var(--cream);
+    padding: 16px 24px; border-radius: var(--radius-md);
+    font-size: 13px; display: none; align-items: center; gap: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transform: translateY(8px);
+    animation: slideup 0.35s ease forwards;
+  }
+  .notification.show { display: flex; }
+  @keyframes slideup { to { transform: translateY(0); } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    :root { --gutter: 32px; --section: 72px; }
+    .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-stats { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .pdp-grid { grid-template-columns: 1fr; gap: 32px; }
+    .pdp-gallery { position: static; }
+    .story-grid { grid-template-columns: 1fr; }
+    .story-images { height: 340px; margin-bottom: 48px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 768px) {
+    :root { --gutter: 20px; --section: 56px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid::before { display: none; }
+    .values-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .prods-toolbar { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 480px) {
+    .categories-grid { grid-template-columns: 1fr 1fr; }
+    .products-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+    .products-header { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('home')">
+      <span class="nav-logo-name">Adwitiya Kalash</span>
+      <span class="nav-logo-tag">AK Collection</span>
+    </a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('products')">Collection</a></li>
+      <li><a onclick="showPage('about')">Our Story</a></li>
+      <li><a onclick="showPage('contact')" class="nav-cta">Enquire Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');toggleMobile()">Home</a>
+  <a onclick="showPage('products');toggleMobile()">Collection</a>
+  <a onclick="showPage('about');toggleMobile()">Our Story</a>
+  <a onclick="showPage('contact');toggleMobile()">Contact</a>
+</div>
+
+<!-- ════════════ HOME PAGE ════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">AK Collection — Est. 2018</div>
+      <h1 class="hero-title">
+        Wear the Art of
+        <em>Tradition.</em>
+      </h1>
+      <p class="hero-sub">Handpicked ethnic & contemporary clothing for women, men, and children — where every thread tells a story.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" onclick="showPage('products')">
+          Explore Collection
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn-outline" onclick="showPage('about')">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Happy Families</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">6+</div>
+        <div class="hero-stat-label">Years of Craft</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">Collections</div>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item">Women's Ethnic Wear <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Men's Kurta Sets <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Children's Festive Wear <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Fusion & Western <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Bridal Collections <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Handcrafted with Love <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Women's Ethnic Wear <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Men's Kurta Sets <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Children's Festive Wear <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Fusion & Western <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Bridal Collections <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Handcrafted with Love <span class="marquee-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Browse by Category</div>
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+        <h2 class="section-title">Every occasion, <em>every soul</em></h2>
+        <a class="btn-primary" onclick="showPage('products')" style="font-size:12px;padding:12px 24px;">View All</a>
+      </div>
+      <div class="categories-grid">
+        <div class="cat-card" onclick="filterAndShow('Women')">
+          <div class="cat-bg cat-women" style="height:100%;display:flex;align-items:center;justify-content:center;">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.25">
+              <ellipse cx="60" cy="35" rx="18" ry="22" fill="white"/>
+              <path d="M25 110 Q35 65 60 62 Q85 65 95 110" fill="white"/>
+              <path d="M38 75 Q25 80 20 95" stroke="white" stroke-width="3" fill="none"/>
+              <path d="M82 75 Q95 80 100 95" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Women's Wear</div>
+            <div class="cat-count">Sarees · Kurtas · Anarkali · Lehenga</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+        <div class="cat-card" onclick="filterAndShow('Men')">
+          <div class="cat-bg cat-men" style="height:100%;display:flex;align-items:center;justify-content:center;">
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none" style="opacity:0.25">
+              <ellipse cx="50" cy="28" rx="16" ry="18" fill="white"/>
+              <path d="M20 110 L28 58 Q50 54 72 58 L80 110" fill="white"/>
+              <path d="M28 60 L12 90" stroke="white" stroke-width="10" stroke-linecap="round"/>
+              <path d="M72 60 L88 90" stroke="white" stroke-width="10" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Men's Wear</div>
+            <div class="cat-count">Kurta · Sherwani · Dhoti Sets</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+        <div class="cat-card" onclick="filterAndShow('Kids')">
+          <div class="cat-bg cat-kids" style="height:100%;display:flex;align-items:center;justify-content:center;">
+            <svg width="90" height="110" viewBox="0 0 90 110" fill="none" style="opacity:0.25">
+              <ellipse cx="45" cy="24" rx="14" ry="16" fill="white"/>
+              <path d="M18 100 L24 55 Q45 50 66 55 L72 100" fill="white"/>
+              <path d="M24 57 L10 80" stroke="white" stroke-width="8" stroke-linecap="round"/>
+              <path d="M66 57 L80 80" stroke="white" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Children's Wear</div>
+            <div class="cat-count">Festive · Casual · School</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+        <div class="cat-card" onclick="filterAndShow('Fusion')">
+          <div class="cat-bg cat-fusion" style="height:100%;display:flex;align-items:center;justify-content:center;">
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none" style="opacity:0.25">
+              <path d="M20 30 Q50 10 80 30 Q90 60 80 90 Q50 110 20 90 Q10 60 20 30Z" fill="white"/>
+              <path d="M35 50 L65 50 M35 60 L65 60 M35 70 L55 70" stroke="#5c3a6b" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Fusion & Western</div>
+            <div class="cat-count">Indo-western · Casual chic</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section" style="background:var(--parchment);padding-top:72px;padding-bottom:72px;">
+    <div class="container">
+      <div class="products-header">
+        <div>
+          <div class="section-label">Handpicked for You</div>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+        <a class="btn-primary" onclick="showPage('products')" style="font-size:12px;padding:12px 24px;">See All Products</a>
+      </div>
+      <div class="products-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-images">
+          <div class="story-img-main">
+            <div class="story-img-inner">
+              <svg width="120" height="160" viewBox="0 0 120 160" fill="none">
+                <path d="M30 20 Q60 5 90 20 Q105 60 90 120 Q60 155 30 120 Q15 60 30 20Z" fill="white" opacity="0.4"/>
+                <path d="M45 55 L75 55 M45 70 L75 70 M45 85 L65 85" stroke="white" stroke-width="3" opacity="0.8"/>
+                <circle cx="60" cy="38" r="12" fill="white" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="story-img-accent">
+            <div class="story-img-inner" style="font-size:48px;">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <path d="M40 8 L48 28 L70 28 L54 42 L60 62 L40 50 L20 62 L26 42 L10 28 L32 28Z" fill="white" opacity="0.7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Our Roots</div>
+          <h2 class="section-title">Born from a <em>mother's love</em> for fabric</h2>
+          <p class="section-body">
+            Adwitiya Kalash Collection was born from a simple belief — that clothing is not just what you wear, it is how you feel. Every piece in our collection is chosen with the same care a mother takes when dressing her child.
+          </p>
+          <p class="section-body" style="margin-top:16px;">
+            From vibrant festive wear to everyday elegance, we bring you clothing that honors tradition while embracing the modern spirit of today's families.
+          </p>
+          <div class="story-features">
+            <div class="story-feat">
+              <div class="story-feat-title">✦ Handpicked Fabrics</div>
+              <div class="story-feat-body">Every cloth is personally selected for quality and feel</div>
+            </div>
+            <div class="story-feat">
+              <div class="story-feat-title">✦ Family-First</div>
+              <div class="story-feat-body">Clothing for the whole family under one roof</div>
+            </div>
+            <div class="story-feat">
+              <div class="story-feat-title">✦ Trusted Since 2018</div>
+              <div class="story-feat-body">500+ families dressed with love and care</div>
+            </div>
+            <div class="story-feat">
+              <div class="story-feat-title">✦ Tailored Support</div>
+              <div class="story-feat-body">Personal assistance for every order via WhatsApp</div>
+            </div>
+          </div>
+          <div style="margin-top:32px;">
+            <a class="btn-primary" onclick="showPage('about')">Read Our Full Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section-sm" style="background:var(--parchment);">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:0;">
+        <div class="section-label" style="justify-content:center;">How it Works</div>
+        <h2 class="section-title" style="text-align:center;">Simple as <em>saying hello</em></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <div class="process-title">Browse Collection</div>
+          <div class="process-body">Explore our curated range of ethnic and contemporary clothing online</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <div class="process-title">WhatsApp Us</div>
+          <div class="process-body">Send your selection, size, and any customization via WhatsApp</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <div class="process-title">Confirm & Pay</div>
+          <div class="process-body">We confirm availability and share payment details securely</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">4</div>
+          <div class="process-title">Receive & Shine</div>
+          <div class="process-body">Your order is carefully packed and delivered to your door</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-label">What Families Say</div>
+      <h2 class="section-title">Worn with love, <em style="color:var(--gold-light)">remembered forever</em></h2>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The Diwali lehenga I ordered for my daughter was absolutely breathtaking. The fabric quality and craftsmanship were beyond my expectations."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">P</div>
+            <div>
+              <div class="testi-name">Priya Sharma</div>
+              <div class="testi-loc">Mumbai · Regular Customer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Found my husband's sherwani and my saree both from AK Collection. The matching was perfect and the service was so personal and warm."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Ritu Verma</div>
+              <div class="testi-loc">Delhi · Wedding Collection</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Ordered kids' outfits for a family function. Everything arrived on time, perfectly packed, and my children looked like royalty! Will always come back."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Anita Gupta</div>
+              <div class="testi-loc">Jaipur · Family Purchase</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section style="background:var(--gold);padding:64px 0;">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px;">
+      <div>
+        <h2 style="font-family:var(--font-display);font-size:40px;font-weight:400;color:var(--ink);line-height:1.1;">Ready to find your <em style="font-style:italic;">perfect outfit?</em></h2>
+        <p style="font-size:14px;color:rgba(26,18,8,0.65);margin-top:10px;">WhatsApp us directly — we'll help you choose the right piece.</p>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hello! I'd like to enquire about your collection." class="whatsapp-btn" style="width:auto;padding:16px 36px;background:var(--ink);color:var(--cream);" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Adwitiya Kalash Collection</div>
+          <div class="footer-brand-tag">AK Collection</div>
+          <p class="footer-brand-body">Premium ethnic and contemporary clothing for the whole family. Handpicked with love, worn with pride.</p>
+          <div class="footer-social">
+            <div class="social-btn" title="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <div class="social-btn" title="Facebook">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </div>
+            <a href="https://wa.me/919876543210" class="social-btn" title="WhatsApp" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Collection</div>
+          <ul class="footer-links">
+            <li><a onclick="filterAndShow('Women')">Women's Wear</a></li>
+            <li><a onclick="filterAndShow('Men')">Men's Wear</a></li>
+            <li><a onclick="filterAndShow('Kids')">Children's Wear</a></li>
+            <li><a onclick="filterAndShow('Fusion')">Fusion Wear</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Pages</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('products')">All Products</a></li>
+            <li><a onclick="showPage('about')">Our Story</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Get in Touch</div>
+          <div style="font-size:13px;color:rgba(250,246,240,0.5);line-height:2;">
+            <p>📞 +91 98765 43210</p>
+            <p>📧 ak.collection@email.com</p>
+            <p>📍 Your City, India</p>
+          </div>
+          <a href="https://wa.me/919876543210" class="whatsapp-btn" style="margin-top:20px;font-size:11px;padding:12px 20px;" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Order via WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Adwitiya Kalash Collection. All rights reserved.</p>
+        <p class="footer-copy">Designed with ♥ for AK Collection</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════ PRODUCTS PAGE ════════════ -->
+<div class="page" id="page-products">
+  <div class="prods-page-hero">
+    <div class="container">
+      <div class="hero-eyebrow" style="margin-bottom:16px;">AK Collection</div>
+      <h1 class="prods-page-title">Our <em style="font-style:italic;">Collection</em></h1>
+      <p class="prods-page-sub">Handpicked clothing for every occasion, every season, every soul.</p>
+    </div>
+  </div>
+  <div class="prods-page-body">
+    <div class="container">
+      <div class="prods-toolbar">
+        <div class="products-filters" id="filterChips">
+          <button class="filter-chip active" onclick="filterProducts('All', this)">All</button>
+          <button class="filter-chip" onclick="filterProducts('Women', this)">Women</button>
+          <button class="filter-chip" onclick="filterProducts('Men', this)">Men</button>
+          <button class="filter-chip" onclick="filterProducts('Kids', this)">Children</button>
+          <button class="filter-chip" onclick="filterProducts('Fusion', this)">Fusion</button>
+        </div>
+        <div class="search-bar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search products..." id="searchInput" oninput="searchProducts()">
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--mist);margin-bottom:24px;" id="productCount">Showing all products</p>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </div>
+  <footer class="footer" style="margin-top:0;">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Adwitiya Kalash Collection</p>
+        <a onclick="showPage('home')" class="footer-copy" style="cursor:pointer;">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════ PRODUCT DETAIL PAGE ════════════ -->
+<div class="page" id="page-pdp">
+  <div style="padding-top:68px;">
+    <div class="container">
+      <div class="back-btn" id="pdpBack" onclick="goBack()">← Back to Collection</div>
+      <div class="pdp-grid" id="pdpContent"></div>
+    </div>
+  </div>
+  <footer class="footer" style="margin-top:64px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Adwitiya Kalash Collection</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════ ABOUT PAGE ════════════ -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="container">
+      <div class="hero-eyebrow" style="margin-bottom:20px;">Our Story</div>
+      <h1 class="about-hero-title">Woven from tradition,<br><em>stitched with love</em></h1>
+      <p style="font-size:15px;color:rgba(250,246,240,0.55);margin-top:24px;max-width:520px;line-height:1.8;">The story of Adwitiya Kalash Collection is a story of a family's passion for the art of dressing well — together.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">More than a store — <em>a family's dream</em></h2>
+          <p class="section-body">Adwitiya Kalash Collection was started with a dream: to make beautiful, high-quality ethnic and fusion clothing accessible to every family, not just for special occasions — but for every moment worth celebrating.</p>
+          <p class="section-body" style="margin-top:16px;">
+            The name "Adwitiya" means unique, one of a kind. That belief drives every piece we curate. And "Kalash" — the sacred vessel — represents our commitment to being a home for the finest traditions in clothing.
+          </p>
+          <p class="section-body" style="margin-top:16px;">
+            From the very first day, we have believed in the power of personal service. Every customer is treated like family. Every question answered with warmth. Every order packed with care.
+          </p>
+        </div>
+        <div class="story-images" style="height:500px;">
+          <div class="story-img-main" style="background:linear-gradient(135deg, #3a2010, #8b5c3a);">
+            <div class="story-img-inner">
+              <svg width="100" height="130" viewBox="0 0 100 130" fill="none">
+                <path d="M20 15 Q50 5 80 15 Q90 50 80 110 Q50 125 20 110 Q10 50 20 15Z" fill="white" opacity="0.3"/>
+                <path d="M35 45 L65 45 M35 58 L65 58 M35 71 L55 71" stroke="white" stroke-width="2.5" opacity="0.8"/>
+                <circle cx="50" cy="30" r="10" fill="white" opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
+          <div class="story-img-accent" style="background:linear-gradient(135deg, #5c3a6b, #8a6080);">
+            <div class="story-img-inner" style="font-size:48px; color:var(--gold-light);">
+              ✦
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section-sm" style="background:var(--parchment);">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:0;">
+        <div class="section-label" style="justify-content:center;">Our Values</div>
+        <h2 class="section-title" style="text-align:center;">What we <em>stand for</em></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🧵</div>
+          <div class="value-title">Quality Above All</div>
+          <div class="value-body">We personally inspect and select every piece in our collection. If we wouldn't wear it for our own family's celebration, it doesn't make it to our shelves.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🏡</div>
+          <div class="value-title">Family-First Heart</div>
+          <div class="value-body">Every product is chosen with families in mind — matching sets, coordinating outfits, styles for every age from toddlers to grandparents.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌸</div>
+          <div class="value-title">Tradition & Modernity</div>
+          <div class="value-body">We honor our cultural roots while embracing the contemporary spirit. Our collection bridges the timeless and the trendy seamlessly.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💬</div>
+          <div class="value-title">Personal Service</div>
+          <div class="value-body">Every customer gets a personal response. We're not a faceless brand — we're a family you can WhatsApp, call, and trust.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">✦</div>
+          <div class="value-title">Honest Pricing</div>
+          <div class="value-body">Beautiful clothing shouldn't cost a fortune. We work hard to bring you premium quality at honest, fair prices with no hidden charges.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🎁</div>
+          <div class="value-title">Joyful Delivery</div>
+          <div class="value-body">Each order is packed with the same care we'd give a gift. Because when you open your parcel, that first impression matters.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+        <div>
+          <div class="section-label">Our Journey</div>
+          <h2 class="section-title">Six years of <em>dressing families</em></h2>
+          <p class="section-body" style="margin-bottom:40px;">Every milestone has been shaped by the trust and love of our customers.</p>
+          <div class="journey-timeline">
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-year">2018</div>
+              <div class="journey-title">The First Stitch</div>
+              <div class="journey-body">AK Collection begins from home — a small selection of handpicked ethnic wear, offered through word-of-mouth to neighbors and friends.</div>
+            </div>
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-year">2019</div>
+              <div class="journey-title">Expanding the Family</div>
+              <div class="journey-body">Added men's and children's categories after numerous requests from loyal customers who wanted complete family outfits from one trusted source.</div>
+            </div>
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-year">2021</div>
+              <div class="journey-title">Going Digital</div>
+              <div class="journey-body">Launched WhatsApp ordering and an online presence, enabling families across India to access our collection with the same personal service.</div>
+            </div>
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-year">2024</div>
+              <div class="journey-title">500+ Happy Families</div>
+              <div class="journey-body">Today, AK Collection serves over 500 families with love, expanding our range to include fusion and contemporary styles alongside our beloved ethnic wear.</div>
+            </div>
+          </div>
+        </div>
+        <div style="padding-top:64px;">
+          <div style="background:var(--ink);border-radius:var(--radius-md);padding:48px;color:var(--cream);">
+            <div style="font-family:var(--font-display);font-size:60px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:8px;">500+</div>
+            <div style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,246,240,0.5);margin-bottom:32px;">Happy Families Served</div>
+            <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+              <div>
+                <div style="font-family:var(--font-display);font-size:36px;font-weight:300;color:var(--gold-light);">6+</div>
+                <div style="font-size:11px;color:rgba(250,246,240,0.4);letter-spacing:0.1em;margin-top:4px;">Years of trust</div>
+              </div>
+              <div>
+                <div style="font-family:var(--font-display);font-size:36px;font-weight:300;color:var(--gold-light);">4</div>
+                <div style="font-size:11px;color:rgba(250,246,240,0.4);letter-spacing:0.1em;margin-top:4px;">Collections</div>
+              </div>
+              <div>
+                <div style="font-family:var(--font-display);font-size:36px;font-weight:300;color:var(--gold-light);">100%</div>
+                <div style="font-size:11px;color:rgba(250,246,240,0.4);letter-spacing:0.1em;margin-top:4px;">Personal service</div>
+              </div>
+              <div>
+                <div style="font-family:var(--font-display);font-size:36px;font-weight:300;color:var(--gold-light);">★ 5.0</div>
+                <div style="font-size:11px;color:rgba(250,246,240,0.4);letter-spacing:0.1em;margin-top:4px;">Customer rating</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:24px;text-align:center;">
+            <a onclick="showPage('contact')" class="btn-primary" style="display:inline-flex;">Connect With Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Adwitiya Kalash Collection</p>
+        <a onclick="showPage('home')" class="footer-copy" style="cursor:pointer;">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════ CONTACT PAGE ════════════ -->
+<div class="page" id="page-contact">
+  <div style="padding-top:68px;background:var(--ink);">
+    <div class="container" style="padding-top:48px;padding-bottom:56px;">
+      <div class="hero-eyebrow" style="margin-bottom:16px;">We're Here for You</div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(40px,5vw,72px);font-weight:300;color:var(--cream);line-height:1;margin-bottom:16px;">Let's <em style="font-style:italic;color:var(--gold-light)">talk</em></h1>
+      <p style="font-size:14px;color:rgba(250,246,240,0.5);">Reach out via WhatsApp, call, or email — we'll get back to you warmly.</p>
+    </div>
+  </div>
+  <section class="section" style="padding-top:64px;">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label" style="margin-bottom:24px;">Contact Details</div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <div class="contact-item-title">WhatsApp (Preferred)</div>
+              <div class="contact-item-val">+91 98765 43210</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-item-title">Phone</div>
+              <div class="contact-item-val">+91 98765 43210</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-item-title">Email</div>
+              <div class="contact-item-val">ak.collection@email.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-item-title">Location</div>
+              <div class="contact-item-val">Your City, India</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-item-title">Business Hours</div>
+              <div class="contact-item-val">Mon–Sat, 10 AM – 8 PM</div>
+            </div>
+          </div>
+          <a href="https://wa.me/919876543210?text=Hello AK Collection! I'd like to enquire about your products." class="whatsapp-btn" style="margin-top:32px;" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Chat Directly on WhatsApp
+          </a>
+        </div>
+        <div>
+          <div class="contact-form-wrap">
+            <h3 class="form-title">Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-input" placeholder="Priya Sharma">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone / WhatsApp</label>
+                <input type="tel" class="form-input" placeholder="+91 98765 43210">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" placeholder="you@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">What are you looking for?</label>
+              <select class="form-input" style="cursor:pointer;">
+                <option>Women's Ethnic Wear</option>
+                <option>Men's Wear</option>
+                <option>Children's Wear</option>
+                <option>Fusion / Western</option>
+                <option>Complete Family Outfits</option>
+                <option>Bridal / Wedding Collection</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Message</label>
+              <textarea class="form-input" placeholder="Tell us about the occasion, what you're looking for, budget, etc."></textarea>
+            </div>
+            <button class="form-submit" onclick="handleFormSubmit()">Send Message</button>
+            <a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Or message us on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Adwitiya Kalash Collection</p>
+        <a onclick="showPage('home')" class="footer-copy" style="cursor:pointer;">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- NOTIFICATION -->
+<div class="notification" id="notification">
+  <span>✓</span><span id="notifText">Message sent successfully!</span>
+</div>
+
+<script>
+// ── PRODUCT DATA (easy to update) ──
+const PRODUCTS = [
+  { id: 1, name: 'Banarasi Silk Saree', category: 'Women', price: 4800, badge: 'New', desc: 'Pure silk weave with traditional zari borders. Perfect for weddings and festive occasions.', colors: ['#c06040','#b8832a','#5c3a6b','#2a3a5c'], sizes: ['S','M','L','XL'], features: ['Pure Banarasi silk', 'Traditional zari border', 'Blouse piece included'], gradient: 'linear-gradient(135deg, #8b3a2a 0%, #c06040 50%, #e8c97a 100%)' },
+  { id: 2, name: 'Anarkali Suit Set', category: 'Women', price: 3200, badge: 'Bestseller', desc: 'Flowing Anarkali with palazzo pants and dupatta. Embroidered yoke with mirror work.', colors: ['#5c3a6b','#c06040','#1a7060'], sizes: ['XS','S','M','L','XL','XXL'], features: ['Hand embroidered', 'Mirror work detail', 'Dupatta included'], gradient: 'linear-gradient(135deg, #5c3a6b 0%, #8a6080 50%, #d8c0e0 100%)' },
+  { id: 3, name: 'Boys Sherwani Set', category: 'Kids', price: 1800, badge: 'New', desc: 'Elegant sherwani with churidar for boys. Perfect for weddings and festive events.', colors: ['#b8832a','#1a1208','#8b3a2a'], sizes: ['2–3Y','4–5Y','6–7Y','8–9Y','10–11Y'], features: ['Rich brocade fabric', 'Embroidered buttons', 'Churidar included'], gradient: 'linear-gradient(135deg, #5c6b52 0%, #8a9a78 50%, #c8d8a8 100%)' },
+  { id: 4, name: 'Kurta Pajama Set', category: 'Men', price: 2400, badge: null, desc: 'Classic cotton kurta with matching pajama. Subtle print, ideal for festivals and casual wear.', colors: ['#2a3a5c','#5c6b52','#8b3a2a'], sizes: ['S','M','L','XL','XXL'], features: ['Premium cotton', 'Machine washable', 'Pajama included'], gradient: 'linear-gradient(135deg, #2a3a5c 0%, #4a6080 50%, #8a9ab0 100%)' },
+  { id: 5, name: 'Lehenga Choli', category: 'Women', price: 6500, originalPrice: 7800, badge: 'Sale', desc: 'Bridal-inspired lehenga with heavy embroidery and attached dupatta. Statement piece for any celebration.', colors: ['#c06040','#5c3a6b','#b8832a'], sizes: ['S','M','L','XL'], features: ['Heavy embroidery', 'Flared skirt', 'Matching blouse & dupatta'], gradient: 'linear-gradient(135deg, #c06040 0%, #e8b080 50%, #f7eed8 100%)' },
+  { id: 6, name: 'Girls Salwar Kameez', category: 'Kids', price: 1200, badge: 'New', desc: 'Bright cotton salwar kameez for girls. Comfortable for school or casual outings.', colors: ['#c06040','#5c6b52','#5c3a6b'], sizes: ['3–4Y','5–6Y','7–8Y','9–10Y'], features: ['Soft cotton', 'Easy wash', 'Dupatta included'], gradient: 'linear-gradient(135deg, #c06040 0%, #e8c97a 60%, #f2ece2 100%)' },
+  { id: 7, name: 'Sherwani with Dupatta', category: 'Men', price: 5500, badge: 'Bestseller', desc: 'Regal sherwani for weddings and celebrations. Comes with matching dupatta and accessories.', colors: ['#1a1208','#b8832a','#5c3a6b'], sizes: ['S','M','L','XL','XXL'], features: ['Heavy brocade', 'Embroidered collar', 'Dupatta & accessories included'], gradient: 'linear-gradient(135deg, #1a1208 0%, #3a2010 50%, #b8832a 100%)' },
+  { id: 8, name: 'Indo-Western Co-ord Set', category: 'Fusion', price: 2800, badge: 'New', desc: 'Chic contemporary co-ord set blending Indian prints with modern silhouette. Versatile and stylish.', colors: ['#8a9ab0','#c06040','#5c3a6b'], sizes: ['XS','S','M','L','XL'], features: ['Contemporary cut', 'Indian block prints', 'Mix-and-match friendly'], gradient: 'linear-gradient(135deg, #5c3a6b 0%, #9a6090 40%, #e8d0f0 100%)' },
+  { id: 9, name: 'Cotton Kurti (Pack of 3)', category: 'Women', price: 1800, badge: null, desc: 'Comfortable everyday cotton kurtis with beautiful block prints. Mix and match with any bottom wear.', colors: ['#c06040','#5c6b52','#b8832a'], sizes: ['XS','S','M','L','XL','XXL'], features: ['Pure cotton', 'Hand block printed', 'Set of 3 kurtis'], gradient: 'linear-gradient(135deg, #8b3a2a 0%, #c06040 40%, #e8c97a 100%)' },
+];
+
+let currentFilter = 'All';
+let previousPage = 'products';
+
+function createProductCard(product, showFull = false) {
+  const badge = product.badge ? `<div class="product-badge ${product.badge.toLowerCase() === 'sale' ? 'sale' : product.badge.toLowerCase() === 'new' ? 'new' : ''}">${product.badge}</div>` : '';
+  const priceHtml = product.originalPrice
+    ? `<div class="product-price"><span class="original">₹${product.originalPrice.toLocaleString()}</span><span class="sale">₹${product.price.toLocaleString()}</span></div>`
+    : `<div class="product-price">₹${product.price.toLocaleString()}</div>`;
+  return `
+    <div class="product-card" onclick="showProduct(${product.id})">
+      <div class="product-img-wrap">
+        <div class="product-img" style="background:${product.gradient};height:100%;display:flex;align-items:center;justify-content:center;">
+          <svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="22" rx="13" ry="16" fill="white" opacity="0.25"/>
+            <path d="M12 85 Q18 48 40 45 Q62 48 68 85" fill="white" opacity="0.25"/>
+            <path d="M18 52 Q8 58 5 74" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.2"/>
+            <path d="M62 52 Q72 58 75 74" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.2"/>
+          </svg>
+        </div>
+        ${badge}
+        <div class="product-wish">♡</div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">${product.category}</div>
+        <div class="product-name">${product.name}</div>
+        <div class="product-desc">${product.desc.substring(0,60)}…</div>
+        <div class="product-footer">
+          ${priceHtml}
+          <span class="product-enquire">View →</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderFeatured() {
+  const el = document.getElementById('featuredGrid');
+  if (!el) return;
+  const featured = PRODUCTS.filter(p => p.badge).slice(0, 3);
+  el.innerHTML = featured.map(p => createProductCard(p)).join('');
+}
+
+function renderProducts(list) {
+  const el = document.getElementById('productsGrid');
+  if (!el) return;
+  el.innerHTML = list.map(p => createProductCard(p)).join('');
+  const count = document.getElementById('productCount');
+  if (count) count.textContent = `Showing ${list.length} product${list.length !== 1 ? 's' : ''}`;
+}
+
+function filterProducts(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const q = (document.getElementById('searchInput') || {}).value || '';
+  applyFilters(cat, q);
+}
+
+function searchProducts() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  applyFilters(currentFilter, q);
+}
+
+function applyFilters(cat, q) {
+  let list = PRODUCTS;
+  if (cat !== 'All') list = list.filter(p => p.category === cat);
+  if (q) list = list.filter(p => p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
+  renderProducts(list);
+}
+
+function filterAndShow(cat) {
+  showPage('products');
+  setTimeout(() => {
+    currentFilter = cat;
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(c => {
+      c.classList.remove('active');
+      if (c.textContent.trim() === cat || (cat === 'Kids' && c.textContent.trim() === 'Children')) c.classList.add('active');
+    });
+    applyFilters(cat, '');
+  }, 50);
+}
+
+function showProduct(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  previousPage = document.querySelector('.page.active')?.id?.replace('page-','') || 'products';
+  const priceHtml = p.originalPrice
+    ? `<span style="font-size:16px;color:var(--mist);text-decoration:line-through;margin-right:8px;">₹${p.originalPrice.toLocaleString()}</span><span style="color:var(--rust);">₹${p.price.toLocaleString()}</span>`
+    : `₹${p.price.toLocaleString()}`;
+  const sizeBtns = p.sizes.map((s,i) => `<button class="size-btn${i===0?' active':''}" onclick="this.parentElement.querySelectorAll('.size-btn').forEach(x=>x.classList.remove('active'));this.classList.add('active')">${s}</button>`).join('');
+  const colorDots = p.colors.map((c,i) => `<div class="color-dot${i===0?' active':''}" style="background:${c}" onclick="this.parentElement.querySelectorAll('.color-dot').forEach(x=>x.classList.remove('active'));this.classList.add('active')"></div>`).join('');
+  const featRows = p.features.map(f => `<div class="pdp-feat-row"><div class="pdp-feat-icon">✦</div><div class="pdp-feat-text">${f}</div></div>`).join('');
+  document.getElementById('pdpContent').innerHTML = `
+    <div class="pdp-gallery">
+      <div class="pdp-main-img">
+        <div style="background:${p.gradient};width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+          <svg width="160" height="200" viewBox="0 0 160 200" fill="none">
+            <ellipse cx="80" cy="44" rx="26" ry="32" fill="white" opacity="0.2"/>
+            <path d="M24 170 Q36 96 80 90 Q124 96 136 170" fill="white" opacity="0.2"/>
+            <path d="M36 104 Q16 116 10 148" stroke="white" stroke-width="16" stroke-linecap="round" opacity="0.15"/>
+            <path d="M124 104 Q144 116 150 148" stroke="white" stroke-width="16" stroke-linecap="round" opacity="0.15"/>
+          </svg>
+        </div>
+      </div>
+      <div class="pdp-thumbs">
+        ${[0,1,2].map((x,i) => `<div class="pdp-thumb${i===0?' active':''}">
+          <div style="background:${p.gradient};width:100%;height:100%;opacity:${0.9-i*0.2};"></div>
+        </div>`).join('')}
+      </div>
+    </div>
+    <div class="pdp-info">
+      <div class="pdp-info-eyebrow">${p.category}'s Collection</div>
+      <h1 class="pdp-title">${p.name}</h1>
+      <div class="pdp-price">${priceHtml}</div>
+      <p class="pdp-desc">${p.desc}</p>
+      <div class="pdp-option-title">Select Size</div>
+      <div class="pdp-sizes">${sizeBtns}</div>
+      <div class="pdp-option-title">Color</div>
+      <div class="pdp-colors">${colorDots}</div>
+      <div class="pdp-actions">
+        <a href="https://wa.me/919876543210?text=Hello! I'm interested in the ${encodeURIComponent(p.name)} (₹${p.price}). Can you please help me with availability?" class="pdp-btn-primary" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Enquire on WhatsApp
+        </a>
+        <button class="pdp-btn-primary" style="background:var(--parchment);color:var(--ink);" onclick="showPage('contact')">Send an Enquiry</button>
+      </div>
+      <div class="pdp-features">${featRows}</div>
+    </div>
+  `;
+  showPage('pdp');
+}
+
+function goBack() {
+  showPage(previousPage);
+}
+
+// ── PAGE ROUTER ──
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + name)?.classList.add('active');
+  window.scrollTo(0, 0);
+  if (name === 'products') renderProducts(PRODUCTS);
+  if (name === 'home') renderFeatured();
+}
+
+// ── MOBILE MENU ──
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── FORM SUBMIT ──
+function handleFormSubmit() {
+  const notif = document.getElementById('notification');
+  document.getElementById('notifText').textContent = 'Message received! We\'ll WhatsApp you soon. 🙏';
+  notif.classList.add('show');
+  setTimeout(() => notif.classList.remove('show'), 4000);
+}
+
+// ── INIT ──
+renderFeatured();
+renderProducts(PRODUCTS);
+</script>
+</body>
+</html>
